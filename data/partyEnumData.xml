@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="seed">
+
+    <!-- Enum Type Party -->
+    <moqui.basic.EnumerationType
+            enumTypeId="PartyType"
+            description="Party Type"/>
+
+
+    <!-- Enum Values Party -->
+    <moqui.basic.Enumeration
+            enumId="PERSON"
+            enumTypeId="PartyType"
+            description="Person"/>
+
+    <moqui.basic.Enumeration
+            enumId="PARTY_GROUP"
+            enumTypeId="PartyType"
+            description="Party Group"/>
+
+
+<!--  EnumType ContactMechType   -->
+    <moqui.basic.EnumerationType
+            enumTypeId="contactMechType"
+            description="Contact Type"/>
+
+<!--  Enum Values ContactMechType  -->
+    <moqui.basic.Enumeration
+            enumId="EMAIL"
+            enumTypeId="contactMechType"
+            description="Email Id"/>
+    <moqui.basic.Enumeration
+            enumId="TELECOM_NUMBER"
+            enumTypeId="contactMechType"
+            description="telephone number"/>
+    <moqui.basic.Enumeration
+            enumId="POSTAL_ADDRESS"
+            enumTypeId="contactMechType"
+            description="postal address"/>
+
+
+
+
+
+
+
+
+
+
+</entity-facade-xml>

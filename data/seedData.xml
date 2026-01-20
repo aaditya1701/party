@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<entity-facade-xml type="seed">
+
+<!--  A Party of type PERSON  -->
+    <party.Party partyId="1" partyTypeEnumId="PERSON" createdDate="0100-12-31 23:01:00"/>
+
+
+<!--  A matching Person record  -->
+    <party.Person partyId="1" firstName="Aaditya" lastName="Mahashabde" dateOfBirth="2005-01-17"/>
+
+
+<!--  A Party of type PARTY_GROUP -->
+    <party.Party partyId="2" partyTypeEnumId="PARTY_GROUP" createdDate="0100-12-31 23:01:00"/>
+
+
+<!--  A matching PartyGroup record  -->
+    <party.PartyGroup partyId="2" groupName="HotWax" description="Software Company"/>
+
+
+<!--  A ContactMech record for email  -->
+    <party.ContactMech contactMechId="1" contactMechTypeEnumId="EMAIL" infoString="aadityamahashabde@gmail.com" createdDate="2026-01-20 00:00:00.001"/>
+    <party.ContactMech contactMechId="2" contactMechTypeEnumId="EMAIL" infoString="info@hotwax.com" createdDate="2001-01-01 00:00:00"/>
+
+<!--  A ContactMech record for Phone  -->
+    <party.ContactMech contactMechId="3" contactMechTypeEnumId="TELECOM_NUMBER" infoString="6266182084" createdDate="2026-01-20 00:00:00"/>
+
+<!-- PartyContactMech link records  -->
+    <party.PartyContactMech partyId="1" contactMechId="1" fromDate="2026-01-20 00:00:00"/>
+    <party.PartyContactMech partyId="1" contactMechId="3" fromDate="2026-01-20 00:00:00"/>
+
+    <party.PartyContactMech partyId="2" contactMechId="2" fromDate="2026-01-20 00:00:00"/>
+    <party.PartyContactMech partyId="2" contactMechId="3" fromDate="2026-01-20 00:00:00"/>
+</entity-facade-xml>
