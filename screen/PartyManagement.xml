@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        include-child-content="true"
+        require-authentication="anonymous-all">
+
+    <subscreens default-item="PartyScreen"/>
+    <widgets>
+        <label type="h1" text="Party Management Application"/>
+    <subscreens-active/>
+<!--        <subscreens-panel id="partyManagement" type="popup"/>-->
+
+    </widgets>
+
+</screen>
+
+
+
+<!--  ask doubt when this file was named as person.xml it was not rendering but when it was named to personScreen it worked why??? -->

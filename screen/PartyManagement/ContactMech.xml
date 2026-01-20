@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+    <actions>
+        <entity-find entity-name="party.ContactMech" list="contactMechList"/>
+    </actions>
+
+    <widgets>
+        <form-list name="ContactMech" list="contactMechList" transition=".">
+        <auto-fields-entity entity-name="party.ContactMech" field-type="display" auto-columns="true" include="all"/>
+        </form-list>
+    </widgets>
+</screen>

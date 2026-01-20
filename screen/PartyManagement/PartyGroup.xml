@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns=""
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+
+<actions>
+    <entity-find entity-name="party.PartyGroup" list="partyGroupList"/>
+</actions>
+
+
+
+    <widgets>
+        <label text="Party List" type="h1"/>
+        <form-list name="PartyGroupList" list="partyGroupList" transition=".">
+            <auto-fields-entity entity-name="party.PartyGroup" field-type="display"/>
+        </form-list>
+    </widgets>
+</screen>

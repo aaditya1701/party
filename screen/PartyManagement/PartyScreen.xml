@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+
+
+    <transition name="displayParty">
+        <default-response url="."/>
+    </transition>
+
+    <actions>
+    <entity-find entity-name="party.Party" list="partyList"/>
+<!--        <search-form-inputs/>-->
+    </actions>
+
+    <widgets>
+<label text="Party List" type="h1"/>
+        <form-list name="PartyList" list="partyList" transition="displayParty" >
+<!--            <auto-fields-entity entity-name="party.Party" />-->
+
+            <field name="partyId">
+                <header-field show-order-by="true">
+                    <text-find hide-options="true"/>
+                </header-field>
+            <default-field>
+                <display/>
+            </default-field>
+            </field>
+
+            <field name="partyTypeEnumId">
+                <header-field>
+                    <text-find hide-options="true"/>
+                </header-field>
+                <default-field>
+                    <display/>
+                </default-field>
+            </field>
+
+            <field name="createdDate">
+                <default-field>
+                    <display/>
+                </default-field>
+            </field>
+
+        </form-list>
+
+    </widgets>
+</screen>
