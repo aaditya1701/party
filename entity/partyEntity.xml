@@ -6,7 +6,7 @@
     <entity entity-name="Party" package="party">
         <field name="partyId" type="id" is-pk="true"/>
         <field name="partyTypeEnumId" type="id"/>
-        <field name="createdDate" type="date-time"/>
+        <field name="createdDate" type="date-time" default="ec.user.getNowTimestamp()"/>
 
         <relationship type="one" related="moqui.basic.Enumeration">
             <key-map field-name="partyTypeEnumId"/>

@@ -4,14 +4,31 @@
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         require-authentication="anonymous-all">
 
-
+<transition name="createPerson">
+    <service-call name="partyManagement.person.personService.create#Person"/>
+    <default-response url="."/>
+</transition>
 <actions>
     <entity-find entity-name="party.Person" list="personList"/>
 </actions>
 
 
 
+
     <widgets>
+
+<!--    Create Person Form    -->
+        <container-dialog id="CreatePerson" button-text="Create Person">
+            <form-single name="CreatePerson" transition="createPerson">
+                <auto-fields-entity entity-name="party.Person" field-type="edit" />
+                <field name="submit">
+                    <default-field>
+                        <submit/>
+                    </default-field>
+                </field>
+            </form-single>
+        </container-dialog>
+
         <label text="Person List" type="h1"/>
         <form-list name="PersonList" list="personList" transition=".">
             <auto-fields-entity entity-name="party.Person" field-type="display"/>

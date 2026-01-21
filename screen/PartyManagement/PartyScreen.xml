@@ -21,8 +21,16 @@
             <form-single name="CreateParty"
                          transition="createParty">
 
-                <auto-fields-entity entity-name="party.Party"
-                                    field-type="edit"/>
+                <field name="partyTypeEnumId">
+                    <default-field>
+                        <drop-down required-manual-select="true">
+                            <option key="PERSON"/>
+                            <option key="PARTY_GROUP"/>
+                        </drop-down>
+                    </default-field>
+                </field>
+
+
                 <field name="submit">
                     <default-field title="submit button">
                         <submit />
@@ -31,8 +39,12 @@
             </form-single>
         </container-dialog>
 
-        <form-list name="PartyList" list="partyList">
 
+
+
+
+<!--   party data   -->
+        <form-list name="PartyList" list="partyList">
             <field name="partyId">
                 <header-field show-order-by="true">
                     <text-find hide-options="true"/>
@@ -47,7 +59,6 @@
             <field name="createdDate">
                 <default-field><display/></default-field>
             </field>
-
         </form-list>
 
     </widgets>
